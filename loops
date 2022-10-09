@@ -1,0 +1,7 @@
+if __name__ == '__main__':
+    n = int(input())
+    for num in range(0, 20):
+        while num < n:
+            print(num*num)
+            num+=1
+        break
