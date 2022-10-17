@@ -1,0 +1,17 @@
+for i in range(n-1,-1,-1):
+        if arr[i] < arr[i-1]:
+            temp = arr[i]
+            arr[i] = arr[i-1]
+            print(*arr)
+            for i in range(n-3,-2,-1):
+                if temp < arr[i]:
+                    arr[i+1] = arr[i]
+                    print(*arr)
+                    while i == 0 and temp < arr[0]:
+                        arr[0] = temp
+                        print(*arr)
+                        quit()
+                elif temp > arr[i]:
+                    arr[i+1] = temp
+                    print(*arr)
+                    quit()
